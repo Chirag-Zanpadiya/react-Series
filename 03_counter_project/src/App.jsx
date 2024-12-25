@@ -22,9 +22,29 @@ function App() {
     // after using the hooks
 
     if (counter <= 19) {
-      counter = counter + 1;
 
-      setCounter(counter);
+      //  ya ha pai to basic js ka concept hai ki increament hogi 4 times
+      // counter = counter + 1;
+      // counter = counter + 1;
+      // counter = counter + 1;
+      // counter = counter + 1;
+
+
+      //  yaha pe to jaise pehle kam kar rahata vaise ab kam karege increment by only one 
+      // setCounter(counter + 1);
+      // setCounter(counter + 1);
+      // setCounter(counter + 1);
+      // setCounter(counter + 1);
+
+
+      //  agar apko bar bar increment karna hai to consider the below the sytax
+
+      setCounter(prevCounter =>prevCounter + 1)
+      setCounter(prevCounter =>prevCounter + 1)
+      setCounter(prevCounter =>prevCounter + 1)
+      setCounter(prevCounter =>prevCounter + 1)
+ 
+
     } else {
       setStr("upper then 20");
     }
