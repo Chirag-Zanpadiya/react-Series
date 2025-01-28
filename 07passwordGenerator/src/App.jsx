@@ -46,6 +46,8 @@ function App() {
   let copyClipBoard = () => {
     // use ko ach ecperiance dene ke liye hai
     passwordSelector.current?.select();
+    passwordSelector.current?.setSelectionRange(0 ,20);
+    // passwordSelector.current.focus();
 
     window.navigator.clipboard.writeText(password);
   };
