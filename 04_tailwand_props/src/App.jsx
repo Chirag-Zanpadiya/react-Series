@@ -13,7 +13,7 @@ function App() {
   };
   return (
     <>
-      <h1 className="bg-green-500 p-5 text-center to-black text-black rounded-xl mb-4">
+      <h1 className=" bg-green-500  p-5 text-center to-black text-black rounded-xl mb-4">
         Chirag Zanpdadiya
       </h1>
 

@@ -32,8 +32,8 @@ import React from 'react'
 // );
 
 
-// react have own methods to create the eleme
 
+// react have own methods to create the eleme
 let username = "chirag zanpadiya"
 const eleCreatedByReact = React.createElement(
     'a',
@@ -45,19 +45,22 @@ username
 
 )
 
+
+// react ki render methods ko kuch specifis ways me parameter chahiye hoge eliye hamara customreact wala functin works nai kar raha hai
 createRoot(document.getElementById('root')).render(
 
     // MyApp() at the end myapp ek function hi to hai to use hmm execute kara dete hai 
     // but it is not good practice 
-    //  <MyApp/>
+     <App/>
     //  MyApp()
     
     //reactElement
     // <ReactElement/>
 
+    // react behind the scene element ko aise hi convert karta hai 
 
     // AnotherEle
     
-    eleCreatedByReact
+    // eleCreatedByReact
 
 )
