@@ -29,7 +29,8 @@ export default function Footer() {
 
                   <NavLink
                     to="/"
-                    className={({ isActive }) =>
+                    className={
+                      ({ isActive }) =>
                       ` ${
                         isActive ? "text-orange-500" : "text-gray-500"
                       } hover:underline`
