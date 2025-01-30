@@ -41,17 +41,20 @@ const route = createBrowserRouter(
   createRoutesFromElements(
     // parent router hai
     <Route path="/" element={<Layout />}>
-
       {/* layout ke andar jo outlet waha ye sare dynamically ja rahe hai */}
 
       {/* layout ke childredn hai yaha pai */}
       <Route path="" element={<Home />} />
       <Route path="about" element={<About />} />
+
+      {/* <Route path="about" element={<About />}> */}
+      {/* <Route path="team" element={<Team />} />
+      <Route path="company" element={<Company />} /> */}
+      {/* </Route> */}
+
       <Route path="contact" element={<Contact />} />
       <Route path="user/:userid" element={<User />} />
-      <Route
-      loader = {getGithubInfo} 
-       path="github" element={<Github />} />
+      <Route loader={getGithubInfo} path="github" element={<Github />} />
     </Route>
   )
 );
