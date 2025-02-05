@@ -11,7 +11,7 @@ function App() {
 
   // by using hooks
 
-  let [counter, setCounter] = useState(1);
+  let [counter, setCounter] = useState(0);
   let [str, setStr] = useState("");
   // here we increment the counter  but values not affect in the UI
   let addvalue = () => {
@@ -21,33 +21,33 @@ function App() {
 
     // after using the hooks
 
-    if (counter <= 19) {
+    // if (counter <= 19) {
 
-      //  ya ha pai to basic js ka concept hai ki increament hogi 4 times
-      // counter = counter + 1;
-      // counter = counter + 1;
-      // counter = counter + 1;
-      // counter = counter + 1;
-
-
-      //  yaha pe to jaise pehle kam kar rahata vaise ab kam karege increment by only one 
-      // setCounter(counter + 1);
-      // setCounter(counter + 1);
-      // setCounter(counter + 1);
-      // setCounter(counter + 1);
+    //   //  ya ha pai to basic js ka concept hai ki increament hogi 4 times
+    //   // counter = counter + 1;
+    //   // counter = counter + 1;
+    //   // counter = counter + 1;
+    //   // counter = counter + 1;
 
 
-      //  agar apko bar bar increment karna hai to consider the below the sytax
+    //   //  yaha pe to jaise pehle kam kar rahata vaise ab kam karege increment by only one 
+      setCounter(counter + 1);
+      setCounter(counter + 1);
+      setCounter(counter + 1);
+      setCounter(counter + 1);
 
-      setCounter(prevCounter =>prevCounter + 1)
-      setCounter(prevCounter =>prevCounter + 1)
-      setCounter(prevCounter =>prevCounter + 1)
-      setCounter(prevCounter =>prevCounter + 1)
+
+    //   //  agar apko bar bar increment karna hai to consider the below the sytax
+
+    //   setCounter(prevCounter =>prevCounter + 1)
+    //   setCounter(prevCounter =>prevCounter + 1)
+    //   setCounter(prevCounter =>prevCounter + 1)
+    //   setCounter(prevCounter =>prevCounter + 1)
  
 
-    } else {
-      setStr("upper then 20");
-    }
+    // } else {
+    //   setStr("upper then 20");
+    // }
   };
 
   let removevalue = () => {
@@ -57,7 +57,8 @@ function App() {
     } else {
       setStr("if you want to decrement the value below 0 it is not possible");
     }
-  };
+
+  }
   return (
     <>
       <h1>Chirag Zanpadiya</h1>
@@ -68,6 +69,6 @@ function App() {
       <p>{str}</p>
     </>
   );
-}
+};
 
 export default App;

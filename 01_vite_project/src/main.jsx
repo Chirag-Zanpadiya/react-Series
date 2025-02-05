@@ -51,8 +51,8 @@ createRoot(document.getElementById('root')).render(
 
     // MyApp() at the end myapp ek function hi to hai to use hmm execute kara dete hai 
     // but it is not good practice 
-     <App/>
-    //  MyApp()
+    //  <App/>
+    //  <MyApp/>
     
     //reactElement
     // <ReactElement/>
@@ -61,6 +61,6 @@ createRoot(document.getElementById('root')).render(
 
     // AnotherEle
     
-    // eleCreatedByReact
+    eleCreatedByReact
 
 )

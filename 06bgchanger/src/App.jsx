@@ -11,7 +11,7 @@ function App() {
         style={{ backgroundColor: color }}
         className="relative h-[100vh] w-[100vw]  bg-violet-300 justify-center transition-all duration-150 "
       >
-        <div className="flex justify-center">
+        <div className="flex justify-center ">
           <div className="flex mx-auto flex-row justify-center  gap-3 rounded-full items-center bottom-[12px] bg-black p-10  absolute">
             <button
               onClick={() => setColor("white")}
