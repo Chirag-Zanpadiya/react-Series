@@ -4,18 +4,11 @@ import { Client, Databases, ID, Storage, Query } from "appwrite";
 // yaha dono services ayegi document create karne wali
 // 2 file upload karne wali
 export class Service {
-
-
-
-
-
-
   client = new Client();
   databases;
   bucket; // storage service
 
   constructor() {
-
     this.client
       .setEndpoint(conf.appwriteUrl)
       .setProject(conf.appwriteProjectId);
@@ -119,26 +112,8 @@ export class Service {
     }
   }
 
-
-
-
-
-
-
-
-
-
   //   services of file upload ki methods
-// below chahe toh alag file me store kara sakte hai
-
-
-
-
-
-
-
-
-
+  // below chahe toh alag file me store kara sakte hai
 
   async uploadFile(file) {
     try {
@@ -185,3 +160,4 @@ export class Service {
 const service = new Service();
 
 export default service;
+

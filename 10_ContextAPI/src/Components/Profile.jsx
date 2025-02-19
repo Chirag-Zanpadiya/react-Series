@@ -4,14 +4,15 @@ import UserContext from "../Context/UserContext";
 function Profile() {
   const { user } = useContext(UserContext);
    if(!user)  return <div>Please Enter UserName First</div>;
-   if(user) return <div> WelCome {user.username } </div>
+   if(user) return <div> WelCome {user.username } </div> 
+  //  TODO: yaha peme user.username isliye likha hai ki waha jag hame login pages setuser karte time dono passown and username pass kiya hai isliye
 }
 
 export default Profile;
 
 
 
-
+// Aapka explanation bilkul sahi hai. user.username ko access karne ka reason yeh hai ki aap login page pe setUser function ko call karte waqt username aur password dono values pass kar rahe hain. Isliye, user object ke andar username property available hai aur aap usse access kar sakte hain. Is tarah se aapka Profile component user ko welcome message show karne ke liye user.username ko access karta hai.
 
 // useContext Hook:
 

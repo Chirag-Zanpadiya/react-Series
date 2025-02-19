@@ -11,6 +11,8 @@ function App() {
   const [numberallowed, setNumberAllowed] = useState(false);
   const [charallowed, setCharAllowed] = useState(false);
 
+  const [copybtn, setCopybtn] = useState("Copy");
+
   // by default passoword set nahi kiya hai
   const [password, setPassword] = useState("");
 
@@ -46,8 +48,13 @@ function App() {
   let copyClipBoard = () => {
     // use ko ach ecperiance dene ke liye hai
     passwordSelector.current?.select();
-    passwordSelector.current?.setSelectionRange(0 ,20);
+    passwordSelector.current?.setSelectionRange(0, 20);
     // passwordSelector.current.focus();
+    setCopybtn((passwordSelector.current.innerHTML = "Copied"));
+
+    setTimeout(() => {
+      setCopybtn((passwordSelector.current.innerHTML = "Copy"));
+    }, 2000);
 
     window.navigator.clipboard.writeText(password);
   };
@@ -58,6 +65,17 @@ function App() {
     passwordGenerator();
   }, [length, charallowed, numberallowed, passwordGenerator]);
 
+  const getPasswordStrength = (password) => {
+    let strength = "Weak";
+    if (password.length >= 12) strength = "Medium";
+    if (
+      password.length >= 16 &&
+      /\d/.test(password) &&
+      /[!@#$%^&*]/.test(password)
+    )
+      strength = "Strong";
+    return strength;
+  };
   return (
     <>
       <div className="flex justify-center h-[100vh] w-[100vw] bg-blue-100 py-20  relative ">
@@ -80,7 +98,7 @@ function App() {
               onClick={copyClipBoard}
               className="w-[17%] rounded-full bg-blue-400 font-bold text-white "
             >
-              Copy
+              {copybtn}
             </button>
           </div>
 
@@ -135,6 +153,11 @@ function App() {
             <label className="py-2  rounded-full font-bold  bg-blue-400  text-white px-2 text-center">
               String Allowed
             </label>
+          </div>
+          <div className="flex justify-center">
+            <p className="text-center mt-4 px-4 py-2 rounded-xl text-orange-300 font-bold text-2xl bg-[#1A1A19] inline-block mx-auto justify-center items-center">
+              Strength: {getPasswordStrength(password)}
+            </p>
           </div>
         </div>
       </div>
@@ -234,4 +257,3 @@ export default App;
  * export default App;
  * ```
  */
-
