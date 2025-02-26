@@ -90,16 +90,19 @@ import useCurrencyInfo from "./hooks/useCurrencyInfo";
 import { InputBox } from "./components";
 
 function App() {
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState();
   const [from, setFrom] = useState("usd");
   const [to, setTo] = useState("inr");
-  const [convertedAmount, setConvertedAmount] = useState(0);
+  const [convertedAmount, setConvertedAmount] = useState();
 
   // Fetch currency info for the "from" currency
   const currencyInfo = useCurrencyInfo(from, to);
-
+  // console.log(` currentinfo ${currencyInfo}`);
+  
   // Check if currencyInfo is an object and not null/undefined before calling Object.keys
   const options = currencyInfo ? Object.keys(currencyInfo) : [];
+  // console.log(`Options are  ${options}`);
+  
 
   const swap = () => {
     setFrom(to);

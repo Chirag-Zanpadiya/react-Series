@@ -9,10 +9,10 @@ function App() {
     <>
       <div
         style={{ backgroundColor: color }}
-        className="relative h-[100vh] w-[100vw]  bg-violet-300 justify-center transition-all duration-150 "
+        className="relative h-[100vh] w-[100vw]   justify-center transition-all duration-500 "
       >
-        <div className="flex justify-center ">
-          <div className="flex mx-auto flex-row justify-center  gap-3 rounded-full items-center bottom-[12px] bg-black p-10  absolute">
+        <div className="flex justify-center  ">
+          <div className="flex mx-auto flex-row justify-center  gap-3 rounded-full items-center bottom-[0px] bg-black p-10  absolute">
             <button
               onClick={() => setColor("white")}
               className=" px-4 py-2 rounded-full w-[100px] bg-white text-black"

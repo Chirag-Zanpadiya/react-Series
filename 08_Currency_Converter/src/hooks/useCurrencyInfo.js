@@ -13,14 +13,14 @@ function useCurrencyInfo(fromCurrency, toCurrency) {
       const fetchData = async () => {
         try {
           const response = await fetch(
-            `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@1/latest/v1/currencies/${fromCurrency}.json`
+            `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${fromCurrency}.json`
           );
           const json = await response.json();
 
           // Extract the rate from the new structure
           const rate = json[fromCurrency][toCurrency];
           if (rate) {
-            setData(rate); // Update state with the relevant currency conversion rate
+            setData(json[fromCurrency]); //Yaha pe pura USd ka object pass kar diya hai
           } else {
             console.error(`Rate not found for: ${fromCurrency} to ${toCurrency}`);
             setData(null);

@@ -26,7 +26,7 @@ function App() {
 
 
 
-      <Card username="Chirag Zanpadiya" />
+      <Card username="Chirag Zanpadiya" password="Mchirag@#$%^&*()" />
       <Card username="Prashant Zanpadiya" password = "123@gmail.com" />
     </>
   );

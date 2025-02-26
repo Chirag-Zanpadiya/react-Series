@@ -49,6 +49,7 @@ function App() {
     // use ko ach ecperiance dene ke liye hai
     passwordSelector.current?.select();
     passwordSelector.current?.setSelectionRange(0, 20);
+    window.navigator.clipboard.writeText(password);
     // passwordSelector.current.focus();
     setCopybtn((passwordSelector.current.innerHTML = "Copied"));
 
@@ -56,7 +57,6 @@ function App() {
       setCopybtn((passwordSelector.current.innerHTML = "Copy"));
     }, 2000);
 
-    window.navigator.clipboard.writeText(password);
   };
 
   // password generator kab kab call karna hai jab check chad ho check-uncheck per  , length per
@@ -65,6 +65,9 @@ function App() {
     passwordGenerator();
   }, [length, charallowed, numberallowed, passwordGenerator]);
 
+
+  // rejex ka use kiya hai
+  
   const getPasswordStrength = (password) => {
     let strength = "Weak";
     if (password.length >= 12) strength = "Medium";

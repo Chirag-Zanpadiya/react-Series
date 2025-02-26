@@ -1,7 +1,7 @@
 import React from "react";
 // import { createLogger } from "vite";
 
-function Card({username , password = "123#gamil.com"}) {
+function Card({username , password = "123#gamil.com yahooo"}) {
 //   console.log("props ", props);
   return (
    
